@@ -25,7 +25,7 @@ This is currently an Ember 1.10 app.
 * (In 2nd terminal window) `./test.sh`
 
 ## To Package App for Deployment
-* `mimosa build -omp` (__o__ptimize, __m__inify, __p__ackage)
+* `mimosa build -omp` (optimize, minify, package)
 * cd `dist`
 * `node app.js`
 * Open app at http://localhost:3000
