@@ -7,8 +7,8 @@ This is currently an Ember 1.10 app.
 
 ## Setup
 * `npm install -g mimosa`
-* git clone https://github.com/dbashford/MimosaEmberSkeleton/
-* cd MimosaEmberSkeleton
+* git clone https://github.com/dbashford/MimosaEmberHTMLBarsSkeleton/
+* cd MimosaEmberHTMLBarsSkeleton
 * `npm install`
 
 ## To Develop
