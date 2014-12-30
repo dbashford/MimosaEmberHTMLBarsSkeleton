@@ -34,8 +34,7 @@ exports.config = {
     'minify-css',
     'minify-img',
     'require@3.1.2',
-    'web-package',
-    'handlebars-on-window'
+    'web-package'
   ],
   minifyJS: {
     exclude:[/ember.js$/, /\.min\./]
