@@ -37,6 +37,9 @@ exports.config = {
     'web-package',
     'handlebars-on-window'
   ],
+  minifyJS: {
+    exclude:[/ember.js$/, /\.min\./]
+  },
   sass: {
     // want to use node-sass rather than ruby compiler
     lib: require('node-sass')
@@ -45,8 +48,8 @@ exports.config = {
     optimize: {
       overrides: {
         paths: {
-          // want to use ember.prod for packaging
-          ember: 'vendor/ember/ember.prod'
+          // want to use ember.min for packaging
+          ember: 'vendor/ember/ember.min'
         }
       }
     }
@@ -101,7 +104,7 @@ exports.config = {
       mainOverrides: {
         showdown: ["compressed/showdown.js"],
         bootstrap: ["dist/css/bootstrap.css", "dist/js/bootstrap.js"],
-        ember:["ember.js","ember.prod.js"]
+        ember:["ember.js","ember.min.js"]
       }
     }
   },
