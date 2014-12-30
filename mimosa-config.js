@@ -1,3 +1,8 @@
+var htmlbarsLib;
+try {
+  htmlbarsLib = require("./.mimosa/bower/bower_components/ember/ember-template-compiler")
+} catch (err) {}
+
 exports.config = {
   minMimosaVersion:"2.3.1",
   modules: [
@@ -9,10 +14,10 @@ exports.config = {
     'ember-module-import',
     'ember-test',
     'ember-env',
-    'ember-htmlbars',
+    'ember-htmlbars@0.3.0',
 
     // compilers
-    'es6-module-transpiler',
+    'esperanto-es6-modules',
     'copy',
     'sass',
     'stream-copy',
@@ -47,7 +52,8 @@ exports.config = {
   },
   emberHtmlbars: {
     emberPath: "ember",
-    helpers:["blogger/helpers/helpers"]
+    helpers:["blogger/helpers/helpers"],
+    lib: htmlbarsLib
   },
   emberModuleImport: {
     apps: [{
@@ -84,7 +90,12 @@ exports.config = {
     }]
   },
   bower: {
+    // keeping bower_components around for ember compiler
+    bowerDir: {
+      clean: false
+    },
     copy: {
+      exclude:[/handlebars/],
       mainOverrides: {
         showdown: ["compressed/showdown.js"],
         bootstrap: ["dist/css/bootstrap.css", "dist/js/bootstrap.js"],
