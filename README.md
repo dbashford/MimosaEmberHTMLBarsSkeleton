@@ -29,5 +29,5 @@ This is currently an Ember 1.10 app.
 * `mimosa build -omp` (optimize, minify, package)
 * cd `dist`
 * `node app.js`
-* Open app at http://localhost:3000
+* Open app at [http://localhost:3000](http://localhost:3000)
 * This is a fully optimized/concatenated app
