@@ -10,9 +10,10 @@ This is currently an Ember 1.10 app.
 * git clone https://github.com/dbashford/MimosaEmberHTMLBarsSkeleton/
 * cd MimosaEmberHTMLBarsSkeleton
 * `npm install`
+* `mimosa bower` - when doing this for the first time, all the Mimosa modules not already resident in Mimosa will be pulled into your project, then all the bower-ized assets will be brought in.
 
 ## To Develop
-* `mimosa watch -s`, when doing this for the first time, all the Mimosa modules not already resident in Mimosa will be pulled into your project.
+* `mimosa watch -s`,
 * Open app at http://localhost:3000
 
 ## To Build with CI tests
@@ -22,7 +23,7 @@ This is currently an Ember 1.10 app.
 * `mimosa testscript` generates a platform specific test script.
 * `mimosa watch` to compile assets and build test assets
 * (In 2nd terminal window) `./test.sh`
-* You also have the option to run tests while you develop by setting   `emberTest.executeDuringWatch` to `true`
+* You also have the option to run tests while you develop by setting   `emberTest.executeDuringWatch` to `true` in the `mimosa-config.js`
 
 ## To Package App for Deployment
 * `mimosa build -omp` (optimize, minify, package)

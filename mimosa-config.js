@@ -1,5 +1,6 @@
 var htmlbarsLib;
 try {
+  // have to guard against first mimosa bower run when this doesn't exist just yet
   htmlbarsLib = require("./.mimosa/bower/bower_components/ember/ember-template-compiler")
 } catch (err) {}
 
@@ -90,11 +91,12 @@ exports.config = {
     }]
   },
   bower: {
-    // keeping bower_components around for ember compiler
+    // keeping bower_components around for ember-template-compiler.js
     bowerDir: {
       clean: false
     },
     copy: {
+      // ember still depends on handlebars via bower, but we don't need it
       exclude:[/handlebars/],
       mainOverrides: {
         showdown: ["compressed/showdown.js"],
