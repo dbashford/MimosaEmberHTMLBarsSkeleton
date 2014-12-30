@@ -14,7 +14,7 @@ This is currently an Ember 1.10 app.
 
 ## To Develop
 * `mimosa watch -s`,
-* Open app at http://localhost:3000
+* Open app at [http://localhost:3000](http://localhost:3000)
 
 ## To Build with CI tests
 * `mimosa build`
