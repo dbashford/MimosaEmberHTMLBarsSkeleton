@@ -15,7 +15,7 @@ exports.config = {
     'ember-module-import',
     'ember-test',
     'ember-env',
-    'ember-htmlbars@0.3.0',
+    'ember-htmlbars@0.4.0',
 
     // compilers
     'esperanto-es6-modules',
