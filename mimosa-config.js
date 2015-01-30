@@ -78,8 +78,8 @@ exports.config = {
   emberEnv: {
     env: {
       FEATURES: {
-        'ember-htmlbars': true,
-        'ember-htmlbars-block-params': true
+        //'ember-htmlbars': true,
+        //'ember-htmlbars-block-params': true
       }
     }
   },
