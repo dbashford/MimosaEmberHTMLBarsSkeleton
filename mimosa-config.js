@@ -112,5 +112,10 @@ exports.config = {
       compileWith: "handlebars",
       extension: "hbs"
     }
+  },
+  jshint: {
+    rules: {
+      esnext:true
+    }
   }
 };
