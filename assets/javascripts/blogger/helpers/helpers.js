@@ -4,8 +4,6 @@ import moment from 'moment';
 
 var showdown = new Showdown.converter();
 
-console.log(Ember.HTMLBars)
-
 Ember.HTMLBars.registerBoundHelper = function(name, helper) {
   var boundHelper = Ember.HTMLBars.makeBoundHelper(helper);
   Ember.HTMLBars._registerHelper(name, boundHelper);
