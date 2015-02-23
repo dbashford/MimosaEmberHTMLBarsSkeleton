@@ -1,8 +1,14 @@
-var routerMap = function() {
-  this.resource('about');
-  this.resource('posts', function() {
-    this.resource('post', { path: ':post_id' });
-  });
-};
+import Ember from 'ember';
 
-export default routerMap;
+Ember.Application.initializer({
+  name: 'router',
+
+  initialize: function(container, application) {
+    application.Router.map(function() {
+      this.resource('about');
+      this.resource('posts', function() {
+        this.resource('post', { path: ':post_id' });
+      });
+    });
+  }
+});
