@@ -5,6 +5,8 @@ A skeleton for Ember apps which includes HTMLBars compilation, testing support a
 
 This is currently an Ember 1.10 app.
 
+An Ember 1.11 app can be checked out [in a branch](https://github.com/dbashford/MimosaEmberHTMLBarsSkeleton/tree/trying1.11.0beta1).
+
 ## Setup
 * `npm install -g mimosa`
 * git clone https://github.com/dbashford/MimosaEmberHTMLBarsSkeleton/
