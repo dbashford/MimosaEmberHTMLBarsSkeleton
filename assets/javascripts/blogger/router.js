@@ -1,14 +1,12 @@
 import Ember from 'ember';
 
-Ember.Application.initializer({
-  name: 'router',
+var Router = Ember.Router.extend();
 
-  initialize: function(container, application) {
-    application.Router.map(function() {
-      this.resource('about');
-      this.resource('posts', function() {
-        this.resource('post', { path: ':post_id' });
-      });
-    });
-  }
+Router.map(function() {
+  this.resource('about');
+  this.resource('posts', function() {
+    this.resource('post', { path: ':post_id' });
+  });
 });
+
+export default Router;

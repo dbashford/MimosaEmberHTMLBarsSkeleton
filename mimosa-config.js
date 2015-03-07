@@ -1,8 +1,12 @@
+
+// have to guard against possible mimosa build without bower having been run
 var htmlbarsLib;
 try {
-  // have to guard against first mimosa bower run when this doesn't exist just yet
   htmlbarsLib = require("./.mimosa/bower/bower_components/ember/ember-template-compiler")
-} catch (err) {}
+} catch (err) {
+  console.log("You may not have run 'mimosa bower', so with this 'mimosa build/watch' you will be using the mimosa-ember-htmlbars default HTMLBars compiler, which may not match your Ember.js version.")
+  console.log("If bower runs as part of this build, restart Mimosa and you will be using the compiler that matches your Ember.js version.")
+}
 
 exports.config = {
   minMimosaVersion:"2.3.1",
@@ -37,7 +41,7 @@ exports.config = {
     'web-package'
   ],
   minifyJS: {
-    exclude:[/ember.js$/, /\.min\./]
+    exclude:[/ember.debug.js$/, /\.min\./]
   },
   sass: {
     // want to use node-sass rather than ruby compiler
@@ -103,7 +107,7 @@ exports.config = {
       mainOverrides: {
         showdown: ["compressed/showdown.js"],
         bootstrap: ["dist/css/bootstrap.css", "dist/js/bootstrap.js"],
-        ember:["ember.js","ember.min.js"]
+        ember:["ember.debug.js","ember.min.js"]
       }
     }
   },

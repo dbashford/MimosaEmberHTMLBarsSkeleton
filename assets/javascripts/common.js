@@ -13,7 +13,7 @@ requirejs.config({
     app: 'blogger/app',
     jquery: 'vendor/jquery/jquery',
     htmlbars: 'vendor/htmlbars',
-    ember: 'vendor/ember/ember',
+    ember: 'vendor/ember/ember.debug',
     showdown: 'vendor/showdown/showdown',
     moment: 'vendor/moment/moment'
   }
