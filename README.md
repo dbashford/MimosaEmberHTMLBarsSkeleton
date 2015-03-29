@@ -3,7 +3,7 @@ MimosaEmberHTMLBarsSkeleton
 
 A skeleton for Ember apps which includes HTMLBars compilation, testing support and the ability to optimize/minify/concatenate/package your application for deployment.
 
-This is currently an Ember 1.10 app.
+This is currently an Ember 1.11 app.
 
 Check the [beta branch](https://github.com/dbashford/MimosaEmberHTMLBarsSkeleton/tree/trying1.11.0beta1) for an Ember 1.11 application.
 

@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-var PostController = Ember.ObjectController.extend({
+var PostController = Ember.Controller.extend({
   isEditing: false,
 
   actions: {
