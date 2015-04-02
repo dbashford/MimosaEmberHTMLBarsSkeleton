@@ -1,11 +1,16 @@
-
-// have to guard against possible mimosa build without bower having been run
 var htmlbarsLib;
 try {
-  htmlbarsLib = require("./.mimosa/bower/bower_components/ember/ember-template-compiler")
+  // have to guard against first mimosa bower run
+  // when this doesn't exist just yet
+  htmlbarsLib =
+    require('./.mimosa/bower/bower_components/ember/ember-template-compiler');
 } catch (err) {
-  console.log("You may not have run 'mimosa bower', so with this 'mimosa build/watch' you will be using the mimosa-ember-htmlbars default HTMLBars compiler, which may not match your Ember.js version.")
-  console.log("If bower runs as part of this build, restart Mimosa and you will be using the compiler that matches your Ember.js version.")
+  var isExecutingBower = process.argv.some(function(arg){ return arg === "bower"});
+  // error out unless user is currently running bower
+  if (!isExecutingBower) {
+    console.error("You need to execute 'mimosa bower' first.")
+    process.exit(1);
+  }
 }
 
 exports.config = {
