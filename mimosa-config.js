@@ -42,9 +42,13 @@ exports.config = {
     'minify-js',
     'minify-css',
     'minify-img',
+    'htmlclean',
     'require@3.1.2',
     'web-package'
   ],
+  htmlclean: {
+    extensions:["hbs"]
+  },
   minifyJS: {
     exclude:[/ember.debug.js$/, /\.min\./]
   },
