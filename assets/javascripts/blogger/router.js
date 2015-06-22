@@ -3,9 +3,9 @@ import Ember from 'ember';
 var Router = Ember.Router.extend();
 
 Router.map(function() {
-  this.resource('about');
-  this.resource('posts', function() {
-    this.resource('post', { path: ':post_id' });
+  this.route('about');
+  this.route('posts', function() {
+    this.route('post', { path: ':post_id', resetNamespace: true });
   });
 });
 

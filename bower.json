@@ -4,15 +4,21 @@
   "dependencies": {
     "jquery": "2.0.3",
     "requirejs": "2.1.14",
-    "ember": "1.11.0",
+    "ember": "1.13.2",
     "showdown": "0.3.1",
     "moment": "2.8.1",
     "bootstrap": "3.2.0"
   },
   "devDependencies": {
-    "qunit": "1.14.0",
+    "qunit": "1.18.0",
     "requirejs": "2.1.14",
-    "sinonjs": "1.10.2",
-    "ember-qunit": "0.1.8"
+    "sinonjs": "http://sinonjs.org/releases/sinon-1.15.0.js",
+    "ember-qunit-builds": "0.4.0",
+    "chai": "3.0.0",
+    "chai-qunit": "0.2.1"
+  },
+  "resolutions": {
+    "chai": "3.0.0",
+    "qunit": "1.18.0"
   }
 }

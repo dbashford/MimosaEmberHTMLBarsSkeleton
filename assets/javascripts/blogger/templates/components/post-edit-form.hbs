@@ -1,0 +1,10 @@
+{{#if isEditing}}
+  <form role="form">
+    <div class="form-group">{{input type="text" value=post.title class="form-control"}}</div>
+    <div class="form-group">{{input type="text" value=post.excerpt class="form-control"}}</div>
+    <div class="form-group">{{textarea value=post.body class="form-control"}}</div>
+  </form>
+  <button {{action "doneEditing"}} class="btn btn-primary">Done</button>
+{{else}}
+  <button {{action "edit"}} class="btn btn-primary">Edit</button>
+{{/if}}
